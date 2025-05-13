@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bento Grid Challenge</title>
+  <style>
+    :root {
+      --purple: #7e5bef;
+      --light-purple: #d7c4ff;
+      --yellow: #fcd34d;
+      --orange: #fbbf24;
+      --white: #ffffff;
+      --black: #111827;
+      --gray: #f3f4f6;
+    }body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--gray);
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.highlight {
+  background-color: var(--purple);
+  color: var(--white);
+  text-align: center;
+}
+
+.button {
+  background-color: var(--yellow);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.chart, .followers {
+  background-color: var(--light-purple);
+}
+
+@media (min-width: 768px) {
+  .card:nth-child(1) {
+    grid-column: span 2;
+  }
+  .card:nth-child(4) {
+    grid-column: span 2;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="card highlight">
+      <h2>Social Media <strong>10x Faster</strong> with AI</h2>
+      <p>Over 4,000 5-star reviews</p>
+    </div><div class="card">
+  <h3>Create and schedule content <em>quicker</em>.</h3>
+  <button class="button">Create Post</button>
+</div>
+
+<div class="card">
+  <h3>Write your content using AI.</h3>
+  <p>Example: "Give me 5 tips to grow followers"...</p>
+</div>
+
+<div class="card">
+  <h3>Manage multiple accounts and platforms.</h3>
+</div>
+
+<div class="card">
+  <h3>Maintain a consistent posting schedule.</h3>
+  <p>August 2024 - Week 1</p>
+</div>
+
+<div class="card chart">
+  <h3>Schedule to social media.</h3>
+  <p>Best Time to Post: Most Active at 9am</p>
+</div>
+
+<div class="card">
+  <h3>>56% faster audience growth</h3>
+</div>
+
+<div class="card followers">
+  <h3>Grow followers with non-stop content.</h3>
+  <p>Follower Growth: 20,642 | Total Followers: 89,532</p>
+</div>
+
+  </div>
+</body>
+</html>
